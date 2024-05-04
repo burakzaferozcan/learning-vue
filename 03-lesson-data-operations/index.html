@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js Denemesi</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="ilk-uygulama">
+      <h2>isim : {{name}}</h2>
+      <h2>meslek : {{job}}</h2>
+      <h2>yaş : {{age}}</h2>
+      <p>giyim : {{giyim}}</p>
+      <p>pantolon var mı ? : {{giyim.pantolon}}</p>
+      <p>yetenekler :</p>
+      <ul>
+        <li v-for="yetenek in yetenekler" :key="yetenek">{{yetenek}}</li>
+      </ul>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

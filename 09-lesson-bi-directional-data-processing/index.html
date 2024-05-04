@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js Denemesi</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>keyboard events</h1>
+      <label for="name">isim : </label>
+      <input type="text" v-model="name" />
+      <label for="age"> yaş : </label>
+      <input type="text" v-model="age" />
+      <p>isim : {{name}}</p>
+      <p>yas : {{age}}</p>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

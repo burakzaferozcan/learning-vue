@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js Denemesi</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>işlenmiş özellikler</h1>
+      <button v-on:click="a++">a'ya 1 ekle</button>
+      <button v-on:click=" b++">b'ye 1 ekle</button>
+      <p>a: {{a}}</p>
+      <p>b: {{b}}</p>
+      <!-- <p>yaş + a = {{yasaAEkle()}}</p>
+      <p>yaş + b = {{yasaBEkle()}}</p> -->
+      <p>yaş + a = {{yasaAEkleComputed}}</p>
+      <p>yaş + b = {{yasaBEkleComputed}}</p>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

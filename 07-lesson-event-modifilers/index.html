@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js Denemesi</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>etkinlikler - events</h1>
+      <p>Yaşım : {{age}}</p>
+      <div>
+        <!-- once sadece 1 kez çalışmasını sağlar -->
+        <button v-on:click.once="age++">yaşımı arttır</button>
+        <button v-on:click="age--">yaşımı azalt</button>
+      </div>
+      <div>
+        <button v-on:click="arttir">yaşımı fonksiyon ile arrtır</button>
+        <button v-on:click="azalt">yaşımı fonksiyon ile azalt</button>
+      </div>
+      <div>
+        <button v-on:click="onArttir(10)">
+          yaşımı fonksiyon ile 10 arrtır
+        </button>
+        <button v-on:click="onAzalt(10)">yaşımı fonksiyon ile 10 azalt</button>
+      </div>
+      <div
+        id="canvas"
+        v-on:mousemove="updateXY"
+        style="
+          background-color: black;
+          width: 300px;
+          height: 300px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          flex-direction: column;
+        "
+      >
+        <p>x : {{x}}</p>
+        <p>y : {{y}}</p>
+      </div>
+      <a v-on:click.prevent="tikla" href="https://www.burakzaferozcan.com"
+        >benimsayfam</a
+      >
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

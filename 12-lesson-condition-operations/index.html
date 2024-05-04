@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js Denemesi</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>şart işlemleri</h1>
+      <button v-on:click="error=!error">hata toggle</button>
+      <button v-on:click="success=!success">basari toggle</button>
+      <!-- <p v-if="error">işlem hata verdi</p>
+      <p v-else-if="success">işlem başarılı</p> -->
+      <p v-show="error">işlem hata verdi</p>
+      <p v-show="success">işlem başarılı</p>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js Denemesi</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>döngü işlemleri</h1>
+      <ul>
+        <li v-for="karakter in karakterler">{{karakter}}</li>
+      </ul>
+      <ul>
+        <li v-for="(ozellik,index) in ozellikler">
+          {{index+1}}- isim : {{ozellik.name}} - yaş : {{ozellik.age}}
+        </li>
+      </ul>
+      <template v-for="(ozellik,index) in ozellikler">
+        <h3>{{index+1}}- isim : {{ozellik.name}}</h3>
+        <p>yaş : {{ozellik.age}}</p>
+      </template>
+      <div v-for="(ozellik,index) in ozellikler">
+        <template v-for="(value,key) in ozellik">
+          <p>{{key}} : {{value}}</p>
+        </template>
+      </div>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>
